@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kafka-docker-example
-          image: ucasgalo/kafka-docker-example:0.1.0
+          image: lucasgalo/kafka-docker-example:0.1.0
           ports:
             - containerPort: 8081
           env:
