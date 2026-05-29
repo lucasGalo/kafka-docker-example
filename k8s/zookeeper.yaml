@@ -27,9 +27,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: zookeeper
+  namespace: kafka
 spec:
+  type: NodePort
   ports:
     - port: 2181
       targetPort: 2181
+      nodePort: 32181   # escolha uma porta entre 30000–32767
   selector:
     app: zookeeper

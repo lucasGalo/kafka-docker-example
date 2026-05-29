@@ -59,8 +59,10 @@ metadata:
   name: kafka
   namespace: kafka
 spec:
+  type: NodePort
   ports:
     - port: 9092
       targetPort: 9092
+      nodePort: 30092   # Porta fixa entre 30000–32767
   selector:
     app: kafka
